@@ -1,7 +1,7 @@
 ## fake-news-detection-model
 
 
-#### Overview:
+#### Overview
 You’re a Machine Learning Engineer working for a new social media company called ABC Co. The data science team has uncovered a recent surge in the frequency with which news articles are shared over ABC’s platform. While this is good news for customer engagement, the product team is worried about the prevalence of misinformation on the platform. To help mitigate this issue, they have asked you to design a solution for identifying which articles are authentic and which are not.
 
 #### Assumptions
