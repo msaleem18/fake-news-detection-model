@@ -13,3 +13,29 @@ There will be different types of fake news and this model is not equiped to hand
 
 This model is only focused on the main text, it'll use the main text and the training labels to train the model and detect if its a fake news article.
 
+Model Assumptions:
+* Assuming all articles are in English 
+* Assuming fake articles are based on the content as described above
+* Assuming the dataset is balanced (this will not be true in real life scenarios)
+* Articles with words less than 20 are mostly outliers
+
+#### Methodology
+1. Read data from foler, please note the assumption is that the file is stored in your local drive. I have used current working directory function to grab the working directory and then read the files.
+
+2. Data exploration to understand data count, distribution and type of articles. 
+* I have noticed that some (approx. 400) articles have less than 20 words in training set. Assuming they are outloers I dropped them
+* 98% of the articles have less than equal to 1500 words, so max vocab is set at 1500 to limit vocabulary size
+* Word exploration to add 'garbage words' as stop words and exclude them from model
+* Removing low frequency words (less than 5)
+
+3. Trying different models, starting with simpler models to set a base line and then moving up to more complex models.
+* Linear Regression
+* Random Forest
+* LSTM
+* LSTM + Random Forest
+
+4. Results Summary:
+
+
+#### Improvements
+
