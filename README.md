@@ -20,22 +20,37 @@ Model Assumptions:
 * Articles with words less than 20 are mostly outliers
 
 #### Methodology
-1. Read data from foler, please note the assumption is that the file is stored in your local drive. I have used current working directory function to grab the working directory and then read the files.
+1. READ DATA: from foler, please note the assumption is that the file is stored in your local drive. I have used current working directory function to grab the working directory and then read the files: pd.read_csv(current_wd+'/FILE_XYZ.csv')
 
-2. Data exploration to understand data count, distribution and type of articles. 
-* I have noticed that some (approx. 400) articles have less than 20 words in training set. Assuming they are outloers I dropped them
+2. DATA EXPLORATION: to understand data count, distribution and type of articles. 
+* I have noticed that some (approx. 400) articles have less than 20 words in training set. Assuming they are outloers I dropped anything with less than 10 words
 * 98% of the articles have less than equal to 1500 words, so max vocab is set at 1500 to limit vocabulary size
 * Word exploration to add 'garbage words' as stop words and exclude them from model
-* Removing low frequency words (less than 5)
 
-3. Trying different models, starting with simpler models to set a base line and then moving up to more complex models.
-* Linear Regression
+3. PREPROCESSING: I have used spacy pipeline to preprocess text data. This includes:
+* stop words removal + adding a few of my own stop words
+* clean text such as remove special characters and remove https links
+* tokenize, lemmatize and rejoin to create clean lemmatized sentences
+
+4. FEATURE GENERATION: Genrate features such as word count, word count after clean up etc. After pre-processing and feature generation new file was stored in the same folder
+
+5. SPLIT DATA: The train dataset was split with 90/10 ratio to create a new dataset for validation. The test dataset was not touched until the end
+
+6. TF-IDF: TFIDF was used to generate TFIDF values for words based on train data only, later fitted on valiation and test data. This will be used to train ML Models
+
+7. TRYING MODELS: Models tried for this project
+* Naive Bayes
+* Logistic Regression
 * Random Forest
 * LSTM
 * LSTM + Random Forest
+* BERT
 
-4. Results Summary:
+8. HYPER-PARAMETERS: LSTM+Random Forest performed the best so that model combination was selected for final hyper parameter tuning. I used Hyperpot python library to find the best optimized parameters
 
 
 #### Improvements
-
+1. Better machines (with GPU) will allow to test more variations of LSTM and BERT model. With CPU only laptop training is extremely slow and can't be managed for larger epochs. Train Deep Learning models for larger epochs 
+2. Use BERT embeddings to train a LSTM or other combination of model. The BERT embeddings have a larger vocab context and will help improve overall accuracy.
+3. Get more data
+4. Learn embeddings
