@@ -54,3 +54,4 @@ Model Assumptions:
 2. Use BERT embeddings to train a LSTM or other combination of model. The BERT embeddings have a larger vocab context and will help improve overall accuracy.
 3. Get more data
 4. Learn embeddings
+5. 5. Cross Validation
