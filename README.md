@@ -56,6 +56,8 @@ Model Assumptions:
 
 8. HYPER-PARAMETERS: LSTM+Random Forest performed the best so that model combination was selected for final hyper parameter tuning. I used Hyperpot python library to find the best optimized parameters
 
+9. Final accuracy = 82%
+
 
 #### Improvements
 1. Better machines (with GPU) will allow to test more variations of LSTM and BERT model. With CPU only laptop training is extremely slow and can't be managed for larger epochs. Train Deep Learning models for larger epochs 
