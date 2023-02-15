@@ -22,8 +22,10 @@ Model Assumptions:
 #### How To Run
 1. Download the GIT
 2. Install Packages from the Requirements.txt file
-3. Run python script main_code_to_run.py
+3. Run python script main_code_to_run.py (make sure you are in the correct directory)
 4. Please note that the code is looking for 3 files, train, test and label
+5. Please be patient with the cleaning process, it takes a little time
+6. Print out statements will notify of the running processes
 
 #### Methodology
 1. READ DATA: from foler, please note the assumption is that the file is stored in your local drive. I have used current working directory function to grab the working directory and then read the files: pd.read_csv(current_wd+'/FILE_XYZ.csv')
@@ -60,4 +62,4 @@ Model Assumptions:
 2. Use BERT embeddings to train a LSTM or other combination of model. The BERT embeddings have a larger vocab context and will help improve overall accuracy.
 3. Get more data
 4. Learn embeddings
-5. 5. Cross Validation
+5. Cross Validation
