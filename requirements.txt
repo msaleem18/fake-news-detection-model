@@ -1,0 +1,9 @@
+pandas
+numpy
+re
+os
+pickle
+sklearn==1.1.1
+spacy==3.5.0
+nltk==3.6.5
+tensorflow==2.11.0
