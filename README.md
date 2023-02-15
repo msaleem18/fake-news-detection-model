@@ -19,6 +19,12 @@ Model Assumptions:
 * Assuming the dataset is balanced (this will not be true in real life scenarios)
 * Articles with words less than 20 are mostly outliers
 
+#### How To Run
+1. Download the GIT
+2. Install Packages from the Requirements.txt file
+3. Run python script main_code_to_run.py
+4. Please note that the code is looking for 3 files, train, test and label
+
 #### Methodology
 1. READ DATA: from foler, please note the assumption is that the file is stored in your local drive. I have used current working directory function to grab the working directory and then read the files: pd.read_csv(current_wd+'/FILE_XYZ.csv')
 
