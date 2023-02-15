@@ -21,6 +21,8 @@ Model Assumptions:
 
 #### How To Run
 1. Download the GIT
+** PLEASE NOTE THAT DUE TO LARGE FILE SIZE OF LSTM MODEL THE ARTIFICATS WEREN'T UPLAODED CORRECTLY ON GIT SO PLEASE USE THE GOOGLE CLOUD LINK
+*** CLOUD LINK: https://drive.google.com/drive/folders/1kGIBLK3hlDCn71yHd4r9r2NVMxPRK6YY?usp=sharing
 2. Install Packages from the Requirements.txt file
 3. Run python script main_code_to_run.py (make sure you are in the correct directory)
 4. Please note that the code is looking for 3 files, train, test and label
